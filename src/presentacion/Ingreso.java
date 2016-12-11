@@ -15,16 +15,15 @@ import abstraccion.Conexion;
 /**
  * Servlet implementation class Actualizador
  */
-@WebServlet("/Actualizador")
-public class Actualizador extends HttpServlet {
+@WebServlet("/Ingreso")
+public class Ingreso extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Actualizador() {
+    public Ingreso() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -32,6 +31,7 @@ public class Actualizador extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Conexion con = Conexion.obtenerConexion();
+		String usuario = request.getParameter("");
 		ResultSet resp = con.ejecutarConsulta("SELECT * FROM s_dept;");
 		try {
 			System.out.println(resp.next());
