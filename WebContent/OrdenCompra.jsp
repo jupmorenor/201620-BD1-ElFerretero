@@ -36,7 +36,7 @@
 							Orden de compra
 						</label>
 						<div class="col-sm-10">
-							<input class="form-control" id="numOrden" type="text" value="" disabled>
+							<input class="form-control" name="numOrden" id="numOrden" type="text" value="" disabled>
 						</div>
 					</div>
 					<div class="form-group">
@@ -45,7 +45,7 @@
 							Fecha
 						</label>
 						<div class="col-sm-10">
-							<input class="form-control" id="fechaOrden" type="date" value="" disabled>
+							<input class="form-control" name="fechaOrden" id="fechaOrden" type="date" value="" disabled>
 						</div>
 					</div>
 					<div class="form-group">
@@ -53,7 +53,7 @@
 							Empleado
 						</label>
 						<div class="col-sm-10">
-							<input class="form-control" id="empleadoOrden" type="text" value="" disabled>
+							<input class="form-control" name="empleadoOrden" id="empleadoOrden" type="text" value="" disabled>
 						</div>
 					</div>
 				</form>
@@ -66,7 +66,7 @@
 							Proveedor
 						</label>
 						<div class="col-sm-10">
-							<input class="form-control" id="proveedor" type="text">
+							<input class="form-control" name="proveedor" id="proveedor" type="text">
 						</div>
 					</div>
 					<div class="form-group">
@@ -75,7 +75,7 @@
 							Documento
 						</label>
 						<div class="col-sm-10">
-							<input class="form-control" id="cedulaP" type="text">
+							<input class="form-control" name="cedulaP" id="cedulaP" type="text">
 							<button class="btn btn-default" type="submit">
 								Buscar
 							</button>
@@ -87,7 +87,7 @@
 							Dirección
 						</label>
 						<div class="col-sm-10">
-							<input class="form-control" id="direccionP" type="text">
+							<input class="form-control" name="direccionP" id="direccionP" type="text">
 						</div>
 					</div>
 					<div class="form-group">
@@ -95,7 +95,7 @@
 							Telefono
 						</label>
 						<div class="col-sm-10">
-							<input class="form-control" id="telP" type="text">
+							<input class="form-control" name="telP" id="telP" type="text">
 						</div>
 					</div>
 					<div class="form-group">

@@ -21,18 +21,31 @@
 		    <div class="row">
 		        <div class="col-md-offset-4 col-md-4">
 		            <div class="form-login">
-		            	<h4>Ingresar</h4>
-			           	<input type="text" id="userName" class="form-control input-sm chat-input" placeholder="usuario" />
-			            <br>
-			            <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder="contraseña" />
-			            </br>
-			            <div class="wrapper">
-			            <span class="group-btn">     
-			                <a href="#" class="btn btn-primary btn-md">login<i class="fa fa-sign-in"></i></a>
-			            </span>
-			            </div>
+		            	<form action="Ingreso"  method="post">
+			            	<h4>Ingresar</h4>
+				           	<input type="text" name="userName" class="form-control input-sm chat-input" placeholder="usuario" />
+				            <br>
+				            <input type="password" name="userPassword" class="form-control input-sm chat-input" placeholder="contraseña" />
+				            </br>
+				            <div class="wrapper">
+				            <span class="group-btn">     
+				                <button type="submit" id="login" class="btn btn-primary btn-md">login</button>
+				            </span>
+				            </div>
+				        </form>
 		            </div>
 		        </div>
+		    </div>
+		    <div class="row">
+		    	<div class="col-md-12">
+					<h1 class="text-center page-header">
+					<% if(request.getAttribute("result") != null){%>
+						<%=request.getAttribute("result")%>
+					<%} else {%>
+					<%=""%>
+					<%}%>
+					</h1>
+				</div>
 		    </div>
 		</div>
 	</body>

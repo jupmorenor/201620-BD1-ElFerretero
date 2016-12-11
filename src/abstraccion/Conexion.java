@@ -28,7 +28,7 @@ public class Conexion {
 	
 	public static Conexion obtenerConexion() {
 		if (conexionUnica == null) {
-			conexionUnica = new Conexion("jdbc:oracle:thin:@localhost:1521:XE", "system", "Yamile_00");
+			conexionUnica = new Conexion("jdbc:oracle:thin:@localhost:1521:XE", "system", "Yamile_01");
 		}
 		return conexionUnica;
 	}

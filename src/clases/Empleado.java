@@ -22,7 +22,7 @@ public class Empleado {
 
 	public String consultarEmpleado() {
 		return "select E.ID_EMPLEADO id_emp, E.NOMBRE_E nombre from EMPLEADO E "
-				+ "where E.NIT=" + id;
+				+ "where E.DOCUMENTO_ID='" + id + "'";
 	}
 
 }
