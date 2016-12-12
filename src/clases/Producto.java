@@ -14,8 +14,14 @@ public class Producto {
 
 	private Persona persona;
 
+	public Producto() {}
+	
 	public Producto(int id) {
 		this.id = id;
+	}
+
+	public void setPersona(Persona persona) {
+		this.persona = persona;
 	}
 
 	public String consultarProductos() {

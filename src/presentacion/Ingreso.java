@@ -39,11 +39,13 @@ public class Ingreso extends HttpServlet {
 		if (usuario.equals(clave)) {
 			emp = new Empleado(usuario);
 			String query = emp.consultarEmpleado();
-			System.err.println(query);
 			resp = con.ejecutarConsulta(query);
 			try {
 				if (resp.next()) {
-					response.sendRedirect("menu.jsp");
+					System.out.println(request.getSession().getId());
+					request.getSession().setAttribute("id_emp", resp.getString("id_emp"));
+					request.getSession().setAttribute("conectado", resp.getString("nombre"));
+					request.getRequestDispatcher("/menu.jsp").forward(request, response);
 				} else {
 					request.setAttribute("result", "Usuario no encontrado");
 					request.getRequestDispatcher("/login.jsp").forward(request, response);

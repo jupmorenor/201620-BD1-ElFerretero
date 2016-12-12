@@ -31,12 +31,12 @@ public class Persona {
 	}
 
 	public String consultarPersona() {
-		return "select P.NOMBRE_P nombre, P.DIRECCION direccion, (" + contacto.consultarContacto() 
-				+ ") telefono, from PERSONA P where P.NIT=" + nit;
+		return "select P.NIT nit, P.NOMBRE_P nombre, P.DIRECCION direccion, (" + contacto.consultarContacto() 
+				+ ") telefono from PERSONA P where P.NIT='" + nit + "'";
 	}
 	
 	public String consultarProveedor() {
-		return "select P.ID_PERSONA id_prov from PERSONA P where P.NIT=" + nit;
+		return "select P.ID_PERSONA id_prov from PERSONA P where P.NIT='" + nit + "'";
 	}
 
 }

@@ -18,21 +18,22 @@
 					</h1>
 				</div>
 			</div>
-		    <div class="row">
-		        <div class="col-md-12">
-					<h2 class="text-center page-header">
-						<a href="OrdenCompra.jsp">Generar Orden de compra</a>
-					</h2>
-		        </div>
-		    </div>
-		    <div class="row">
-		        <div class="col-md-12">
-					<h2 class="text-center page-header">
-						<a href="FacturaCompra.jsp">Generar Factura de compra</a>
-					</h2>
-		        </div>
-		    </div>
-
+			<form name="" action="Menu" method="post">
+			    <div class="row">
+			        <div class="col-md-12">
+						<h2 class="text-center page-header">
+							<input type="submit" class="btn btn-primary btn-block" name="dir" value="Generar Orden de compra"></input>
+						</h2>
+			        </div>
+			    </div>
+			    <div class="row">
+			        <div class="col-md-12">
+						<h2 class="text-center page-header">
+							<input type="submit" class="btn btn-primary btn-block" name="dir" value="Generar Factura de compra"></input>
+						</h2>
+			        </div>
+			    </div>
+			</form>
 		</div>
 	</body>
 </html>
