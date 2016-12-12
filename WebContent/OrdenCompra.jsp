@@ -133,7 +133,7 @@
 						<tr id="fila1">
 							
 							<td>
-								<input class="form-control" name="item" id="item" type="text" value="1" disabled>
+								<input class="form-control" name="item" id="item" type="text" oncreate="countRows(this);" disabled>
 							</td>
 							<td>
 								<select class="form-control" >

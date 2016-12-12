@@ -9,7 +9,7 @@ public class Persona {
 	private String tel;
 
 	private Contacto contacto;
-
+	
 	private TipoPersona tipoPersona;
 
 	private Producto producto;
@@ -30,7 +30,7 @@ public class Persona {
 		this.producto = producto;
 	}
 
-	public String consultarPersona() {
+	public String consultarPersona() {	
 		return "select P.NIT nit, P.NOMBRE_P nombre, P.DIRECCION direccion, (" + contacto.consultarContacto() 
 				+ ") telefono from PERSONA P where P.NIT='" + nit + "'";
 	}

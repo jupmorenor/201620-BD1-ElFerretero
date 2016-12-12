@@ -39,12 +39,15 @@ public class OrdenCompra extends HttpServlet {
 		Persona per;
 		Producto pro;
 		Contacto cont;
+		String query;
 		switch (request.getParameter("orden")) {
 		case "Buscar":
 			String nit = request.getParameter("cedulaP");
 			per = new Persona(nit);
 			pro = new Producto();	
-			prov = con.ejecutarConsulta(per.consultarProveedor());
+			query = per.consultarProveedor();
+			System.out.println(query);
+			prov = con.ejecutarConsulta(query);
 			try {
 				if(prov.next()) {
 					cont = new Contacto(prov.getInt("id_prov"));
@@ -54,8 +57,12 @@ public class OrdenCompra extends HttpServlet {
 				System.err.println("Consulta basica de proveedor vacia");
 			}
 			pro.setPersona(per);
-			prov = con.ejecutarConsulta(per.consultarPersona());
-			prod = con.ejecutarConsulta(pro.consultarProductosProveedor());
+			query = per.consultarPersona();
+			System.out.println(query);
+			prov = con.ejecutarConsulta(query);
+			query = pro.consultarProductosProveedor();
+			System.out.println(query);
+			prod = con.ejecutarConsulta(query);
 			try {
 				if (prov.next()) {
 					request.getSession().setAttribute("fecha", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
